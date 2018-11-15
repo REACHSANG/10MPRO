@@ -1,0 +1,175 @@
+<!--
+File: cat3.html
+Name: Reach SANG
+Date: 11/08/18
+Desc: this program will help user with building item and upgrading skill in DOTA2.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--title-->
+        <title>DOTA2 GUIDE</title>
+        <h2 style="color: red">Welcome to Dota2 guide</h2>
+    </head>
+    <body>
+        <!--options-->
+        <select id="op">
+          <option value="build">Build</option>
+          <option value="skill">Skill and talent upgrade</option>
+        </select>
+        <br>
+        <select id="ca">
+            <option value="ursa">URSA</option>
+            <option value="spectre">SPECTRE</option>
+            <option value="am">Anti-Mage</option>
+            <option value="pl">PHANTOM LANCER</option>
+            <option value="jugg">JUGGERNAUT</option>
+        </select>
+        <button onclick="go()">GO!</button><br><br><br>
+        <!--display output-->
+        <div id="test" style="">
+            <img id="sk" src="" alt="" width="500" height="300"><br><br>
+            <img id="tl" src="" alt="" width="500" height="300"><br><br>
+        </div>
+        <div id="tst" style="">
+            <b id="p1"></b><br><img id="img1" src="" alt="" width="360" height="270"><br><br>
+            <b id="p2"></b><br><img id="img2" src="" alt="" width="360" height="270"><br><br>
+            <b id="p3"></b><br><img id="img3" src="" alt="" width="360" height="270"><br><br>
+            <b id="p4"></b><br><img id="img4" src="" alt="" width="360" height="270"><br><br>
+            <b id="p5"></b><br><img id="img5" src="" alt="" width="360" height="270"><br><br>
+            <b id="p6"></b><br><img id="img6" src="" alt="" width="360" height="270"><br><br>
+            <b id="p7"></b><br><img id="img7" src="" alt="" width="360" height="270"><br><br>
+        </div>
+
+
+        <script>
+            //function
+        function go(){
+            var x = document.getElementById("op").value;
+            var y = document.getElementById("ca").value;
+            //building item
+            if(x=="build"){
+                if(y=="ursa"){
+                    document.getElementById("p1").innerHTML= " item 1:"
+                    document.getElementById("p2").innerHTML= " item 2:"
+                    document.getElementById("p3").innerHTML= " item 3:"
+                    document.getElementById("p4").innerHTML= " item 4:"
+                    document.getElementById("p5").innerHTML= " item 5:"
+                    document.getElementById("p6").innerHTML= " item 6:"
+                    document.getElementById("p7").innerHTML= " extra:"
+                    document.getElementById("img1").src = "./img1ur.PNG"
+                    document.getElementById("img2").src = "./img2ur.PNG"
+                    document.getElementById("img3").src = "./img3ur.PNG"
+                    document.getElementById("img4").src = "./img4ur.PNG"
+                    document.getElementById("img5").src = "./img5ur.PNG"
+                    document.getElementById("img6").src = "./img6ur.PNG"
+                    document.getElementById("img7").src = "./img7ur.PNG"
+
+
+                }
+                else if(y=="spectre"){
+                    document.getElementById("p1").innerHTML= " item 1:"
+                    document.getElementById("p2").innerHTML= " item 2:"
+                    document.getElementById("p3").innerHTML= " item 3:"
+                    document.getElementById("p4").innerHTML= " item 4:"
+                    document.getElementById("p5").innerHTML= " item 5:"
+                    document.getElementById("p6").innerHTML= " item 6:"
+                    document.getElementById("p7").innerHTML= " extra:"
+                    document.getElementById("img1").src = "./img1sp.PNG"
+                    document.getElementById("img2").src = "./img2sp.PNG"
+                    document.getElementById("img3").src = "./img3sp.PNG"
+                    document.getElementById("img4").src = "./img4sp.PNG"
+                    document.getElementById("img5").src = "./img5sp.PNG"
+                    document.getElementById("img6").src = "./img6sp.PNG"
+                    document.getElementById("img7").src = "./img7sp.PNG"
+
+
+                }
+                else if(y=="am"){
+                    document.getElementById("p1").innerHTML= " item 1:"
+                    document.getElementById("p2").innerHTML= " item 2:"
+                    document.getElementById("p3").innerHTML= " item 3:"
+                    document.getElementById("p4").innerHTML= " item 4:"
+                    document.getElementById("p5").innerHTML= " item 5:"
+                    document.getElementById("p6").innerHTML= " item 6:"
+                    document.getElementById("p7").innerHTML= " extra:"
+                    document.getElementById("img1").src = "./img1am.PNG"
+                    document.getElementById("img2").src = "./img2am.PNG"
+                    document.getElementById("img3").src = "./img3am.PNG"
+                    document.getElementById("img4").src = "./img4am.PNG"
+                    document.getElementById("img5").src = "./img5am.PNG"
+                    document.getElementById("img6").src = "./img6am.PNG"
+                    document.getElementById("img7").src = "./img7am.PNG"
+
+
+                }
+                else if(y=="pl"){
+                    document.getElementById("p1").innerHTML= " item 1:"
+                    document.getElementById("p2").innerHTML= " item 2:"
+                    document.getElementById("p3").innerHTML= " item 3:"
+                    document.getElementById("p4").innerHTML= " item 4:"
+                    document.getElementById("p5").innerHTML= " item 5:"
+                    document.getElementById("p6").innerHTML= " item 6:"
+                    document.getElementById("p7").innerHTML= " extra:"
+                    document.getElementById("img1").src = "./img1pl.PNG"
+                    document.getElementById("img2").src = "./img2pl.PNG"
+                    document.getElementById("img3").src = "./img3pl.PNG"
+                    document.getElementById("img4").src = "./img4pl.PNG"
+                    document.getElementById("img5").src = "./img5pl.PNG"
+                    document.getElementById("img6").src = "./img6pl.PNG"
+                    document.getElementById("img7").src = "./img7pl.PNG"
+
+
+                }
+                else if(y=="jugg"){
+                    document.getElementById("p1").innerHTML= " item 1:"
+                    document.getElementById("p2").innerHTML= " item 2:"
+                    document.getElementById("p3").innerHTML= " item 3:"
+                    document.getElementById("p4").innerHTML= " item 4:"
+                    document.getElementById("p5").innerHTML= " item 5:"
+                    document.getElementById("p6").innerHTML= " item 6:"
+                    document.getElementById("p7").innerHTML= " extra:"
+                    document.getElementById("img1").src = "./img1jugg.PNG"
+                    document.getElementById("img2").src = "./img2jugg.PNG"
+                    document.getElementById("img3").src = "./img3jugg.PNG"
+                    document.getElementById("img4").src = "./img4jugg.PNG"
+                    document.getElementById("img5").src = "./img5jugg.PNG"
+                    document.getElementById("img6").src = "./img6jugg.PNG"
+                    document.getElementById("img7").src = "./img7jugg.PNG"
+
+
+                }
+                document.getElementById("test").style = "display: none;"
+                document.getElementById("tst").style = "display: initial;"
+            }
+            //skills upgrade
+            else if (x=="skill"){
+                if(y=="ursa"){
+                    document.getElementById("tl").src = "./ur2.PNG"
+                    document.getElementById("sk").src = "./ur1.PNG"
+                }
+                else if(y=="spectre"){
+                    document.getElementById("tl").src = "./sp2.PNG"
+                    document.getElementById("sk").src = "./sp1.PNG"
+                }
+                else if(y=="am"){
+                    document.getElementById("tl").src = "./am2.PNG"
+                    document.getElementById("sk").src = "./am1.PNG"
+                }
+                else if(y=="pl"){
+                    document.getElementById("tl").src = "./pl2.PNG"
+                    document.getElementById("sk").src = "./pl1.PNG"
+                }
+                else if(y=="jugg"){
+                    document.getElementById("tl").src = "./jugg2.PNG"
+                    document.getElementById("sk").src = "./jugg1.PNG"
+                }
+                document.getElementById("tst").style = "display: none;"
+                document.getElementById("test").style = "display: initial;"
+            }
+        }
+
+        </script>
+    </body>
+</html>
