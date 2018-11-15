@@ -1,0 +1,122 @@
+<!--
+File: numberGuesser.html
+Name: Reach SANG
+Date: 10/31/18
+Desc: this program let user to a guess number
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--head/title-->
+        <h>Number Guesser:</h>
+    </head>
+    <body>
+   <!-- Get input-->
+    <p>Please choose the difficulty</p>
+    <select id="ran">
+        <option value="0,10">0-10</option>
+        <option value="0,20">0-20</option>
+        <option value="0,30">0-30</option>
+        <option value="0,40">0-40</option>
+        <option value="0,100">0-100</option>
+        </select>
+
+    Guess = <input type="number" id="num">
+    <button onclick="go()">GO!</button><br>
+        <p id="return"></p>
+    <script>
+        //function
+        function go(){
+            //creating var/responses
+            var a = "Wow Nice One!, CONGRATULATION!!! your guess is correct!:) The number is:";
+            var b = "Good guess but your number is higher than it! Try again. :( The number is:";
+            var c = "Good guess but your number is lower than it! Try again. :( The number is:";
+            var x = document.getElementById("ran").value;
+            var g = document.getElementById("num").value;
+            var p =""
+            //function to generate number for each difficulty
+            if (x == "0,10"){
+                p += Math.floor((Math.random() * 10));
+                if (g > 10 || g < 0){
+                    alert("Please input number from 0 to 10!" );
+                }
+                else{
+                    if (g == p ){
+                        document.getElementById("return").innerHTML = a +" "+ p;
+                    }
+                    else if (g > p){
+                        document.getElementById("return").innerHTML = b +" "+ p;
+                    }
+                    else if (g < p){
+                        document.getElementById("return").innerHTML = c +" "+ p;
+                }}}
+
+            else if (x=="0,20"){
+                    if (g > 20 || g < 0){
+                    alert("Please input number from 0 to 20!" );
+                }
+                else{
+                    p += Math.floor((Math.random() * 20))
+                    if (g == p ){
+                        document.getElementById("return").innerHTML = a +" "+ p;
+                    }
+                    else if (g > p){
+                        document.getElementById("return").innerHTML = b +" "+ p;
+                    }
+                    else if (g < p){
+                        document.getElementById("return").innerHTML = c +" "+ p;
+                }}}
+            else if (x=="0,30"){
+                if (g > 30 || g < 0){
+                    alert("Please input number from 0 to 30!" );
+                }
+                else{
+                    p += Math.floor((Math.random() * 30))
+                    if (g == p ){
+                        document.getElementById("return").innerHTML = a +" "+p;
+                    }
+                    else if (g > p){
+                        document.getElementById("return").innerHTML = b +" "+ p;
+                    }
+                    else if (g < p){
+                        document.getElementById("return").innerHTML = c +" "+ p;
+                }}}
+            else if (x=="0,40"){
+                if (g > 40 || g < 0){
+                    alert("Please input number from 0 to 40!" );
+                }
+                else{
+                    p += Math.floor((Math.random() * 40))
+                    if (g == p ){
+                        document.getElementById("return").innerHTML = a +" "+ p;
+                    }
+                    else if (g > p){
+                        document.getElementById("return").innerHTML = b +" "+ p;
+                    }
+                    else if (g < p){
+                        document.getElementById("return").innerHTML = c +" "+ p;
+                }}}
+            else if (x=="0,100"){
+                if (g > 100 || g < 0){
+                    alert("Please input number from 0 to 100!" );
+                }
+                else{
+                    p += Math.floor((Math.random() * 100))
+                    if (g == p ){
+                        document.getElementById("return").innerHTML = a +" "+ p;
+                    }
+                    else if (g > p){
+                        document.getElementById("return").innerHTML = b +" "+ p;
+                    }
+                    else if (g < p){
+                        document.getElementById("return").innerHTML = c +" "+ p;
+             }}}
+
+        }
+
+
+        </script>
+    </body>
+</html>

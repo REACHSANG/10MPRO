@@ -1,0 +1,69 @@
+<!--
+File: madlibs.html
+Name: Reach SANG
+Date: 11/01/18
+Desc: this program will generate a story for user
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--title-->
+        <h>MADLIB!!!</h><br><br>
+    </head>
+    <body>
+        <!--get input-->
+        Name:<input type="text" id="na"><br>
+        Class at school:<input type="text" id="cl"><br>
+        Professional:<input type="text" id="pr"><br>
+        Adjective:<input type="text" id="ad"><br>
+        Place:<input type="text" id="pl"><br>
+        Length of time:<input type="text" id="lt"><br>
+        Thing:<input type="text" id="t"><br>
+        Person:<input type="text" id="p"><br>
+        Family member:<input type="text" id="fm"><br>
+        <select id="ss">
+            <option value="st1">Story 1</option>
+            <option value="st2">Stroy 2</option>
+        </select><br>
+        <button onclick="go()">GO!</button><br>
+
+        <p id="return"></p>
+
+        <script>
+            //function
+            function go(){
+                //creates var for input
+            var s =  document.getElementById("ss").value;
+           var na = document.getElementById("na").value;
+           var cl = document.getElementById("cl").value;
+           var pr = document.getElementById("pr").value;
+           var ad = document.getElementById("ad").value;
+           var pl = document.getElementById("pl").value;
+           var lt = document.getElementById("lt").value;
+           var t = document.getElementById("t").value;
+           var p = document.getElementById("p").value;
+           var fm = document.getElementById("fm").value;
+           var array=[];
+               //push input to array
+            array.push(na,cl,pr,ad,pl,lt,t,p,fm);
+                //story 1
+            if (s == "st1"){
+                for( var o= 0; o < array.length; o++){
+                    var ret="Please excuse "+array[0]+" from "+array[1]+"today. His "+array[2]+" says he is too "+array[3]+" to attend the "+array[4]+". He will return to school in "+array[5]+" . Please send his "+array[6]+" home with "+array[7]+" ,his sister.    Signed, "+array[0]+"'s "+array[8];
+                     document.getElementById("return").innerHTML=ret;
+            }}
+           //story 2
+            else if ( s == "st2"){
+                for( var i= 0; i < array.length; i++){
+                var ret2="Please let "+array[0]+" go to "+array[1]+"today. His "+array[2]+" says he is "+array[3]+" to go to the "+array[4]+". He will be ok in "+array[5]+" . Please let his "+array[6]+" home with "+array[7]+" ,his brother.    Signed, "+array[0]+"'s "+array[8];
+                     document.getElementById("return").innerHTML=ret2;
+            }}
+
+            }
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!--
+File: cipher.html
+Name: Reach SANG
+Date: 10/27/18
+Desc: this allow user to encrypt messages or decrypt(with known offset only)
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <!--input-->
+        <p>FOR ENCODE THE MESSAGE:</p>
+    TEXT = <input type="text" id="us" onkeyup="go()">
+    OFF SET = <input type="number" id="num" onkeyup="go()">
+
+        <br>
+    <p id="return"></p><br>
+        <br>
+        <br>
+        <p>FOR DECODE THE MESSAGE:</p>
+    CODE = <input type="text" id="CC" onkeyup="goD()">
+    OFF SET = <input type="number" id="DE" onkeyup="goD()">
+
+        <br>
+    <p id="returnD"></p>
+
+        <script>
+        //function
+        function go(){
+            //create var
+            var shift = document.getElementById("num").value;
+            shift = Number(shift)
+            var x = document.getElementById("us").value;
+            var p
+            p=Number(p)
+            var l=""
+            //loop for shifting letters
+            for(i=0; i<x.length; i++){
+                p = x.charCodeAt(i);
+            //lower case letters
+                  if (p <= 122 && p >=97){
+                    l += String.fromCharCode((((p-97)+shift)%26)+97);
+                  }
+            //capital letters
+                  else if (p>=65 && p<=90){
+                    l += String.fromCharCode((((p-65)+shift)%26)+65);
+                   }
+
+
+            //return
+            document.getElementById("return").innerHTML = l;
+        }}
+            function goD(){
+            //create var
+            var offS = document.getElementById("DE").value;
+            offS = Number(offS)
+            var m = document.getElementById("CC").value;
+            var n
+            n=Number(n)
+            var k=""
+            //loop for shifting letters
+            for(var y=0; y<m.length; y++){
+                var letterD = m[y];
+                n = letterD.charCodeAt(0)
+                k += String.fromCharCode(n-offS)
+
+                }
+            //return
+            document.getElementById("returnD").innerHTML = k;
+        }
+
+        </script>
+    </body>
+</html>
