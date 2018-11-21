@@ -14,6 +14,8 @@ Desc: this program will help user with building item and upgrading skill in DOTA
         <h2 style="color: red">Welcome to Dota2 guide<img src="imgDota22.png" align="middle" width="53" height="50"></h2>
     </head>
     <body background=imgDota.jpg>
+        <button onclick="ran()">PICK A RANDOM HERO</button><br>
+        <b style="color: red" id ="4"></b><br><br>
         <!--options-->
         <select id="op">
           <option value="build">Build</option>
@@ -27,11 +29,13 @@ Desc: this program will help user with building item and upgrading skill in DOTA
             <option value="pl">PHANTOM LANCER</option>
             <option value="jugg">JUGGERNAUT</option>
         </select>
-        <button onclick="go()">GO!</button><br><br><br>
+        <button onclick="go()">GO!</button><br><br>
+
         <!--display output-->
         <b style="color: red" id ="1"></b><br><br>
         <b style="color: red" id ="2"></b><br><br>
         <b style="color: red" id ="3"></b><br><br>
+
 
         <div id="test" style="">
             <img id="sk" src="" alt="" width="500" height="300"><br><br>
@@ -49,6 +53,7 @@ Desc: this program will help user with building item and upgrading skill in DOTA
 
 
         <script>
+            var heroes = ["URSA", "SPECTRE", "ANTI-MAGE", "PHANTOM LANCER", "JUGGERNAUT"]
             //function
         function go(){
             var x = document.getElementById("op").value;
@@ -192,6 +197,10 @@ Desc: this program will help user with building item and upgrading skill in DOTA
             }
         }
 
+            function ran(){
+                var nk = Math.floor(Math.random() * heroes.length)
+                document.getElementById("4").innerHTML = heroes[nk]
+            }
         </script>
     </body>
 </html>
