@@ -32,9 +32,7 @@ Desc: this program will help user with building item and upgrading skill in DOTA
         <button onclick="go()">GO!</button><br><br>
 
         <!--display output-->
-        <b style="color: red" id ="1"></b><br><br>
-        <b style="color: red" id ="2"></b><br><br>
-        <b style="color: red" id ="3"></b><br><br>
+
 
 
         <div id="test" style="">
@@ -42,6 +40,9 @@ Desc: this program will help user with building item and upgrading skill in DOTA
             <img id="tl" src="" alt="" width="500" height="300"><br><br>
         </div>
         <div id="tst" style="">
+            <b style="color: red" id ="1"></b><br><br>
+            <b style="color: red" id ="2"></b><br><br>
+            <b style="color: red" id ="3"></b><br><br>
             <b style="color: red" id="p1"></b><br><img id="img1" src="" alt="" width="360" height="270"><br><br>
             <b style="color: red" id="p2"></b><br><img id="img2" src="" alt="" width="360" height="270"><br><br>
             <b style="color: red" id="p3"></b><br><img id="img3" src="" alt="" width="360" height="270"><br><br>
@@ -191,6 +192,7 @@ Desc: this program will help user with building item and upgrading skill in DOTA
                 else if(y=="jugg"){
                     document.getElementById("tl").src = "./jugg2.png"
                     document.getElementById("sk").src = "./jugg1.png"
+
                 }
                 document.getElementById("tst").style = "display: none;"
                 document.getElementById("test").style = "display: initial;"
